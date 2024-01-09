@@ -40,13 +40,13 @@ Coffee & Wifi Website is a Flask web application  that lists helps users find ca
 
 ## Screenshots
  - Home Page:    
-   <div align="center"><img src="weather_alert_1.png" alt="UI Screenshot"/></div>
+   <div align="center"><img src="cafes_1.png" alt="UI Screenshot"/></div>
 
- - The Current weather information on the entered location:    
-   <div align="center"><img src="weather_alert_2.png" alt="UI Screenshot"/></div>
+ - View Cafes:    
+   <div align="center"><img src="cafes_2.png" alt="UI Screenshot"/></div>
 
-  - Send a text message to keep your loved ones informed about the weather information:    
-   <div align="center"><img src="weather_alert_3.png" alt="UI Screenshot"/></div> 
+  - Add Cafe:    
+   <div align="center"><img src="cafes_3.png" alt="UI Screenshot"/></div> 
 
 ## Contributing
    Contributions are welcome! Please fork the repository and create a pull request with your changes.
