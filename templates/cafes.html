@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title %}All Cafes{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>All Cafes</h1>
+      <div class="table-container">
+        <table class="table" style="color: white">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Map URL</th>
+            <th>Image URL</th>
+            <th>Location</th>
+            <th>Seats</th>
+            <th>Has Toilet</th>
+            <th>Has Wi-Fi</th>
+            <th>Has Power Sockets</th>
+            <th>Can Take Calls</th>
+            <th>Coffee Price</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+          {% for cafe in cafes %}
+          <tr>
+            <td>{{ cafe['name'] }}</td>
+            <td><a href="{{ cafe['map_url'] }}">Maps Link</a></td>
+            <td><a href="{{ cafe['img_url'] }}">Image Link</a></td>
+            <td>{{ cafe['location'] }}</td>
+            <td>{{ cafe['seats'] }}</td>
+            <td>{{ 'Yes' if cafe['has_toilet'] else 'No' }}</td>
+            <td>{{ 'Yes' if cafe['has_wifi'] else 'No' }}</td>
+            <td>{{ 'Yes' if cafe['has_sockets'] else 'No' }}</td>
+            <td>{{ 'Yes' if cafe['can_take_calls'] else 'No' }}</td>
+            <td>{{ cafe['coffee_price'] }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+         <div class="pagination">
+        <button id="prev-page">Previous</button>
+        <span id="page-num">Page 1</span>
+        <button id="next-page">Next</button>
+      </div>
+      <p><a href="{{ url_for('add_cafe') }}">Add New Cafe</a></p>
+      <p><a href="{{ url_for('home') }}">Return to index page</a></p>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
